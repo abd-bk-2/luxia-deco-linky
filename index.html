@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Luxia Deco | Link in Bio</title>
+	<meta name="description" content="Luxia Deco is a luxury decoration store with refined design services, curated interiors, and premium showroom contact links." />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						sans: ['Manrope', 'system-ui', 'sans-serif'],
+						serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+					},
+					colors: {
+						burgundy: {
+							950: '#200001',
+							900: '#390003',
+							800: '#5b0006',
+							700: '#7a0008',
+						},
+						champagne: '#f4e7d2',
+						ivory: '#fffaf2',
+					},
+					boxShadow: {
+						luxe: '0 20px 60px rgba(0, 0, 0, 0.35)',
+					},
+				},
+			},
+		};
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		:root {
+			color-scheme: dark;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			min-height: 100vh;
+			overflow-x: hidden;
+			background:
+				radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.09), transparent 24%),
+				radial-gradient(circle at 78% 82%, rgba(255, 210, 170, 0.16), transparent 18%),
+				linear-gradient(135deg, rgba(46, 0, 2, 0.94), rgba(28, 0, 1, 0.98));
+			font-family: 'Manrope', system-ui, sans-serif;
+		}
+
+		.soft-grid {
+			background-image:
+				linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+			background-size: 44px 44px;
+			mask-image: radial-gradient(circle at center, black 30%, transparent 92%);
+		}
+
+		.glass-panel {
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+			backdrop-filter: blur(18px);
+			-webkit-backdrop-filter: blur(18px);
+			border: 1px solid rgba(255, 255, 255, 0.14);
+		}
+
+		.lux-button {
+			position: relative;
+			overflow: hidden;
+			transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+		}
+
+		.lux-button::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.18), transparent 70%);
+			transform: translateX(-120%);
+			transition: transform 650ms ease;
+		}
+
+		.lux-button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+		}
+
+		.lux-button:hover::before {
+			transform: translateX(120%);
+		}
+
+		.glow-orb {
+			filter: blur(18px);
+			opacity: 0.55;
+			animation: drift 12s ease-in-out infinite;
+		}
+
+		.glow-orb.orb-two {
+			animation-delay: -6s;
+		}
+
+		@keyframes drift {
+			0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+			50% { transform: translate3d(18px, -14px, 0) scale(1.08); }
+		}
+	</style>
+</head>
+<body class="text-ivory selection:bg-champagne selection:text-burgundy-950">
+	<div class="pointer-events-none fixed inset-0 soft-grid"></div>
+	<div class="pointer-events-none fixed -left-16 top-12 h-44 w-44 rounded-full bg-champagne/40 glow-orb"></div>
+	<div class="pointer-events-none fixed right-0 bottom-0 h-56 w-56 rounded-full bg-white/30 glow-orb orb-two"></div>
+
+	<main class="relative mx-auto flex min-h-screen w-full max-w-3xl items-center px-4 py-8 sm:px-6 lg:px-8">
+		<section class="glass-panel shadow-luxe relative w-full overflow-hidden rounded-[2rem] p-5 sm:p-6 md:p-8">
+			<div class="absolute inset-0 opacity-35">
+				<img src="bg.png" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+			</div>
+
+			<div class="relative z-10 space-y-6">
+				<header class="flex flex-col items-center text-center">
+					<div class="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/8 p-2 shadow-2xl shadow-black/30 ring-1 ring-white/10 sm:h-36 sm:w-36">
+						<img src="logo.png" alt="Luxia Deco logo" class="h-full w-full rounded-full object-cover object-center scale-[1.08]" />
+					</div>
+					<p class="mt-4 text-xs font-semibold uppercase tracking-[0.45em] text-champagne/85">Luxury decoration studio</p>
+					<h1 class="mt-3 font-serif text-4xl leading-none text-white sm:text-5xl">Luxia Deco</h1>
+					<p class="mt-4 max-w-xl text-sm leading-7 text-white/78 sm:text-base">
+						Curated luxury interiors, elegant decor pieces, and refined finishing touches designed to transform every space into a statement of style.
+					</p>
+				</header>
+
+				<div class="grid gap-3 sm:grid-cols-2">
+					<a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="lux-button flex items-center gap-4 rounded-2xl border border-white/12 bg-white/10 px-4 py-4 text-left">
+						<span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-burgundy-900 shadow-lg">
+							<i class="fa-brands fa-instagram text-xl"></i>
+						</span>
+						<span>
+							<span class="block text-sm font-semibold text-white">Instagram</span>
+							<span class="block text-sm text-white/70">See our latest projects and showroom highlights</span>
+						</span>
+					</a>
+
+					<a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" class="lux-button flex items-center gap-4 rounded-2xl border border-white/12 bg-white/10 px-4 py-4 text-left">
+						<span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-burgundy-900 shadow-lg">
+							<i class="fa-brands fa-tiktok text-xl"></i>
+						</span>
+						<span>
+							<span class="block text-sm font-semibold text-white">TikTok</span>
+							<span class="block text-sm text-white/70">Watch styling ideas, reels, and decor inspiration</span>
+						</span>
+					</a>
+				</div>
+
+				<div class="grid gap-3 md:grid-cols-2">
+					<a href="tel:+213781793557" class="lux-button flex items-center justify-between rounded-2xl border border-white/12 bg-burgundy-800/55 px-4 py-4">
+						<span class="flex items-center gap-3">
+							<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-burgundy-900">
+								<i class="fa-solid fa-phone"></i>
+							</span>
+							<span>
+								<span class="block text-sm font-semibold text-white">Phone number 1</span>
+								<span class="block text-xs text-white/65">+2137 81793557</span>
+							</span>
+						</span>
+						<i class="fa-solid fa-arrow-up-right-from-square text-white/70"></i>
+					</a>
+
+					<a href="tel:+213791656051" class="lux-button flex items-center justify-between rounded-2xl border border-white/12 bg-burgundy-800/55 px-4 py-4">
+						<span class="flex items-center gap-3">
+							<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-burgundy-900">
+								<i class="fa-solid fa-mobile-screen-button"></i>
+							</span>
+							<span>
+								<span class="block text-sm font-semibold text-white">Phone number 2</span>
+								<span class="block text-xs text-white/65">+2137 91656051</span>
+							</span>
+						</span>
+						<i class="fa-solid fa-arrow-up-right-from-square text-white/70"></i>
+					</a>
+				</div>
+
+				<div class="grid gap-3 md:grid-cols-1">
+					<a href="tel:+213553052388" class="lux-button flex items-center justify-between rounded-2xl border border-white/12 bg-burgundy-800/55 px-4 py-4">
+						<span class="flex items-center gap-3">
+							<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-burgundy-900">
+								<i class="fa-solid fa-phone-volume"></i>
+							</span>
+							<span>
+								<span class="block text-sm font-semibold text-white">Phone number 3</span>
+								<span class="block text-xs text-white/65">+213 553 05 23 88</span>
+							</span>
+						</span>
+						<i class="fa-solid fa-arrow-up-right-from-square text-white/70"></i>
+					</a>
+				</div>
+
+				<div class="grid gap-3 md:grid-cols-2">
+					<a href="https://www.google.com/maps/search/?api=1&query=Luxia+Deco+Showroom" target="_blank" rel="noreferrer" class="lux-button flex items-center gap-4 rounded-2xl border border-white/12 bg-white/8 px-4 py-4">
+						<span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-champagne text-burgundy-900">
+							<i class="fa-solid fa-location-dot"></i>
+						</span>
+						<span>
+							<span class="block text-sm font-semibold text-white">Visit the showroom</span>
+							<span class="block text-sm text-white/70">Open in Google Maps</span>
+						</span>
+					</a>
+
+					<a href="https://www.google.com/maps/search/?api=1&query=Luxia+Deco+Interior+Studio" target="_blank" rel="noreferrer" class="lux-button flex items-center gap-4 rounded-2xl border border-white/12 bg-white/8 px-4 py-4">
+						<span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-champagne text-burgundy-900">
+							<i class="fa-solid fa-map-location-dot"></i>
+						</span>
+						<span>
+							<span class="block text-sm font-semibold text-white">Interior studio</span>
+							<span class="block text-sm text-white/70">Find our design consultation space</span>
+						</span>
+					</a>
+				</div>
+
+				<div class="grid gap-3 rounded-[1.75rem] border border-white/12 bg-black/20 p-4 sm:p-5 md:grid-cols-[1.2fr_0.8fr]">
+					<div>
+						<p class="text-xs font-semibold uppercase tracking-[0.35em] text-champagne/75">What we offer</p>
+						<div class="mt-3 grid gap-2 text-sm text-white/75 sm:grid-cols-2">
+							<div class="rounded-2xl bg-white/6 px-4 py-3">Custom decor selection</div>
+							<div class="rounded-2xl bg-white/6 px-4 py-3">Luxury styling support</div>
+							<div class="rounded-2xl bg-white/6 px-4 py-3">Residential and commercial spaces</div>
+							<div class="rounded-2xl bg-white/6 px-4 py-3">Special orders and consultations</div>
+						</div>
+					</div>
+
+					<div class="flex items-center justify-center rounded-[1.25rem] border border-white/10 bg-burgundy-900/65 p-4 text-center">
+						<div>
+							<p class="font-serif text-3xl text-white">Elegant spaces</p>
+							<p class="mt-2 text-sm leading-6 text-white/70">Designed with warmth, precision, and a signature luxury finish.</p>
+						</div>
+					</div>
+				</div>
+
+				<footer class="flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-center text-xs uppercase tracking-[0.3em] text-white/55 sm:flex-row sm:justify-between sm:text-left">
+					<span>Luxia Deco</span>
+					<span>Luxury decoration store</span>
+				</footer>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
